@@ -1,0 +1,34 @@
+*{
+    margin: auto;
+    padding: 0%;
+}
+
+header{
+    left: 20%;
+    padding: 10px;
+    background: white;
+    border-bottom: 10px rgb(255, 192, 227) solid;
+    padding-left: 120px;
+}
+
+ul{
+    float: right;
+}
+
+
+
+li, li a{
+    list-style-type: none;
+    display: inline-block;
+    padding-top: 25px;
+    margin-right: 25px;
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    color: black; 
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+li, li a:hover{
+    transform: scale(1.1);
+    color: rgb(255, 151, 208); 
+}
