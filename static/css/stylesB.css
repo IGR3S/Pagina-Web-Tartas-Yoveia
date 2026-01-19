@@ -17,8 +17,6 @@ ul{
     float: right;
 }
 
-
-
 li, li a{
     list-style-type: none;
     text-decoration: none;
@@ -126,11 +124,10 @@ li, li a:active{
 
 /* -----------Carrousel------------------------------------------------------------------------------------------- */
 
-.carouselInicio {
-  width: 100vw;
-  margin: auto;
+.carousel {
+  position: relative;
+  width: 100%;    
   overflow: hidden;
-  position:relative
 }
 
 .carousel-track {
@@ -139,7 +136,9 @@ li, li a:active{
 }
 
 .slide {
-  min-width: 100vw;
+  min-width: 100%;
+  height: 100%;
+  position: relative;
 }
 .slide img {
   width: 100%;
@@ -150,21 +149,22 @@ li, li a:active{
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.20);
-  margin-top: 155px;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 
 
 button {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0);
   color: white;
   border: none;
-  font-size: 24px;
-  padding: 10px;
+  font-size: 35px;
+  padding: 20px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .prev { left: 0; }
