@@ -31,18 +31,18 @@ li, li a{
 }
 li, li a:hover{
     transform: scale(1.1);
-    color: rgb(255, 111, 190); 
+    color: #ff6fbe; 
 }
 
 li, li a:active{
     transform: scale(1.1);
-    color: rgb(255, 111, 190); 
+    color: #ff6fbe; 
 }
 
 /* --Footer-------------------------------------------------------------------------------------------------- */
 
 .footer {
-  background-color: rgb(255, 155, 210);
+  background-color: #ff6fbe;
   color: #fff;
   font-family: Arial, sans-serif;
   padding: 50px 20px 20px;
@@ -96,7 +96,6 @@ li, li a:active{
   margin: 0 5px;
   border-radius: 50%;
   background-color: #88d0c1;
-  color: #3b2f2a;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -122,7 +121,7 @@ li, li a:active{
 
 /* --Inicio------------------------------------------------------------------------------------------------------- */
 
-/* -----------Carrousel------------------------------------------------------------------------------------------- */
+/* --Inicio--->-Carrousel----------------------------------------------------------------------------------------- */
 
 .carousel {
   position: relative;
@@ -133,6 +132,25 @@ li, li a:active{
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 50%;           
+  left: 50%;          
+  transform: translate(-50%, -50%); 
+  color: white;
+  text-align: center;
+  z-index: 10;        
+}
+
+.carousel-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.carousel-text p {
+  font-size: 1.5rem;
 }
 
 .slide {
@@ -169,3 +187,11 @@ button {
 
 .prev { left: 0; }
 .next { right: 0; }
+
+/* --Inicio------------------------------------------------------------------------------------------------------- */
+
+.titulos{
+  text-align: center;
+  margin: 20px;
+  color: #ff6fbe;
+}
