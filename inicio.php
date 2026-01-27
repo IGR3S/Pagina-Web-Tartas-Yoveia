@@ -1,6 +1,6 @@
-<?php 
-
-    require_once("templates/header.php");
+<?php
+$css = "inicio";
+require_once("templates/header.php");
 
 ?>
 
@@ -33,8 +33,45 @@
 
 <h1 class="titulos"> <i class="fa-solid fa-cake-candles"></i> Las mas vendidas <i class="fa-solid fa-cake-candles"></i> </h1>
 
-<?php 
+<div class="masVendidasCaja">
+  <div id="descripcionTecnica">
+    <p><strong>Nombre de tarta</strong></p>
+    <p>Descripcion brebe sobre la tarta <br>a poder ser de varias lineas</p>
+    <p>Icono ya sea gluten free o sin azucar</p>
+    <p><strong>Precio en €</strong></p>
+  </div>
+  <img id="masVendidas" src="static/img/placeholder3.png" alt="">
+</div>
+<div class="masVendidasCaja">
+  <div id="descripcionTecnica">
+    <p><strong>Nombre de tarta</strong></p>
+    <p>Descripcion brebe sobre la tarta <br>a poder ser de varias lineas</p>
+    <p>Icono ya sea gluten free o sin azucar</p>
+    <p><strong>Precio en €</strong></p>
+  </div>
+  <img id="masVendidas" src="static/img/placeholder3.png" alt="">
+</div>
+<div class="masVendidasCaja">
+  <div id="descripcionTecnica">
+    <p><strong>Nombre de tarta</strong></p>
+    <p>Descripcion brebe sobre la tarta <br>a poder ser de varias lineas</p>
+    <p>Icono ya sea gluten free o sin azucar</p>
+    <p><strong>Precio en €</strong></p>
+  </div>
+  <img id="masVendidas" src="static/img/placeholder3.png" alt="">
+</div>
+<div class="masVendidasCaja">
+  <div id="descripcionTecnica">
+    <p><strong>Nombre de tarta</strong></p>
+    <p>Descripcion brebe sobre la tarta <br>a poder ser de varias lineas</p>
+    <p>Icono ya sea gluten free o sin azucar</p>
+    <p><strong>Precio en €</strong></p>
+  </div>
+  <img id="masVendidas" src="static/img/placeholder3.png" alt="">
+</div>
 
-    require_once("templates/footer.php");
+<?php
+
+require_once("templates/footer.php");
 
 ?>

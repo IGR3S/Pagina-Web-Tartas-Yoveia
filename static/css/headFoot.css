@@ -1,0 +1,138 @@
+*{
+  margin: auto;
+  padding: 0%;
+}
+body{
+  font-family: sans-serif;
+}
+
+/* --Header-------------------------------------------------------------------------------------------------- */
+
+header{
+  background: rgb(255, 240, 249);
+  padding-top: 5px;
+  padding-left: 10%;
+}
+
+ul{
+  float: right;
+}
+
+li, li a{
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 25px;
+  font-size: 18px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  color: black; 
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+li, li a:hover{
+  transform: scale(1.1);
+  color: #ff6fbe; 
+}
+
+li, li a:active{
+  transform: scale(1.1);
+  color: #ff6fbe; 
+}
+
+/* --Footer-------------------------------------------------------------------------------------------------- */
+
+.footer {
+  background-color: #ff6fbe;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 30px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col:nth-child(2){
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: #88d0c1;
+  margin-bottom: 15px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  align-content: center;
+  p{
+    text-align: center;
+  }
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #88d0c1;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-links {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+}

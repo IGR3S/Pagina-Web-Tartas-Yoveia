@@ -9,7 +9,29 @@
     <title>Tartas Yoveia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="static/img/faviconPasteleriaResize.png">
-    <link rel ="stylesheet" href="static/css/stylesB.css">
+    <link rel ="stylesheet" href="static/css/headFoot.css">
+    <?php
+        if(isset($css)){
+            if($css == "inicio"){
+                ?>
+                    <link rel="stylesheet" href="static/css/inicio.css">
+                <?php
+            }else if($css == "inventario"){
+                ?>
+                    <link rel="stylesheet" href="static/css/inventario.css">
+                <?php
+            }else if($css == "contacto"){
+                ?>
+                    <link rel="stylesheet" href="static/css/contacto.css">
+                <?php
+            }else if($css == "footer"){
+                ?>
+                    <link rel="stylesheet" href="static/css/headFoot.css">
+                <?php
+            }
+        }
+
+    ?>
 </head>
 <body>
     <header>
