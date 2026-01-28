@@ -91,20 +91,14 @@ button {
     align-items: center;
     margin-left: 10%;
 }
-.masVendidasCaja:nth-child(even) p{
-    width: 60%;
-    margin:5%
-}
+.masVendidasCaja:nth-child(even) p{ width: 60%; margin:5% }
 .masVendidasCaja:nth-child(odd){
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 10%;
 }
-.masVendidasCaja:nth-child(odd) p{
-    width: 60%;
-    margin:5%
-}
+.masVendidasCaja:nth-child(odd) p{ width: 60%; margin:5% }
 
 #descripcionTecnica{
     display: flex;
@@ -115,6 +109,17 @@ button {
         font-size: 18px;
     }
     strong{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
+
+.menuMapa{
+    margin: 5%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.textoMapa{ flex-direction: column; }
+.textoMapa > h2{ text-align: center; color: #ff6fbe; margin-bottom: 10px; font-size: 30px;}
+.textoMapa > p{ text-align: center; font-size: 20px;}

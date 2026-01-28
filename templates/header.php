@@ -14,19 +14,19 @@
         if(isset($css)){
             if($css == "inicio"){
                 ?>
-                    <link rel="stylesheet" href="static/css/inicio.css">
+                    <link rel="stylesheet" href="static/css/inicio_A.css">
                 <?php
             }else if($css == "inventario"){
                 ?>
-                    <link rel="stylesheet" href="static/css/inventario.css">
+                    <link rel="stylesheet" href="static/css/inventario_A.css">
                 <?php
             }else if($css == "contacto"){
                 ?>
-                    <link rel="stylesheet" href="static/css/contacto.css">
+                    <link rel="stylesheet" href="static/css/contacto_A.css">
                 <?php
             }else if($css == "footer"){
                 ?>
-                    <link rel="stylesheet" href="static/css/headFoot.css">
+                    <link rel="stylesheet" href="static/css/headFoot_A.css">
                 <?php
             }
         }
