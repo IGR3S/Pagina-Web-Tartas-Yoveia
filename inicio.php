@@ -70,6 +70,8 @@ require_once("templates/header.php");
     <img id="masVendidas" src="static/img/placeholder3.png" alt="">
 </div>
 
+<hr>
+
 <div class="menuMapa">
     <div>
         <iframe 
