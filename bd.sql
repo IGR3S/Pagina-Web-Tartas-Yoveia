@@ -13,8 +13,7 @@ CREATE TABLE `usuarios` (
     `id_usuario` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `correo_usuario` VARCHAR(100) NOT NULL,
     `nombre_usuario` VARCHAR(100) NOT NULL,
-    `apellido1_usuario` VARCHAR(100) NULL,
-    `apellido2_usuario` VARCHAR(100) NULL,
+    `apellidos_usuario` VARCHAR(100) NULL,
     `telefono_usuario` VARCHAR(13) NOT NULL,
     `activo` BOOLEAN NOT NULL DEFAULT TRUE
 ) ENGINE = INNODB;
@@ -27,11 +26,13 @@ CREATE TABLE `pedidos` (
 ) ENGINE = INNODB;
 
 CREATE TABLE `tartas` (
-    `id_tarta` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `id_tarta` INT NOT NULL PRIMARY KEY,
     `nombre_tarta` VARCHAR(100) NOT NULL,
     `descripcion` TEXT NULL,
     `precio` DECIMAL(10,2) NOT NULL,
-    `sin_azucar` BOOLEAN NOT NULL DEFAULT FALSE
+    `sin_azucar` BOOLEAN NOT NULL DEFAULT FALSE,
+    `img_entera` VARCHAR(200),
+    `img_porcion` VARCHAR(200)
 ) ENGINE = INNODB;
 
 CREATE TABLE `linea_pedidos` (
@@ -46,34 +47,21 @@ CREATE TABLE `tartas_ingredientes` (
     `id_ingrediente` INT NOT NULL ,
     PRIMARY KEY (id_tarta, id_ingrediente)
 ) ENGINE = INNODB;
- 
-CREATE TABLE `proveedor` (
-    `id_proveedor` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `nombre_proveedor` VARCHAR(100) NOT NULL,
-    `localidad` VARCHAR(100) NULL
-) ENGINE = INNODB;
 
 CREATE TABLE `ingredientes` (
     `id_ingrediente` INT NOT NULL PRIMARY KEY,
-    `nombre_ingrediente` VARCHAR(100) NOT NULL,
-    `id_proveedor` INT NOT NULL PRIMARY KEY
-) ENGINE = INNODB;
-
-CREATE TABLE `ingredientes_proveedores` (
-    `id_ingrediente` INT NOT NULL,
-    `id_proveedor` INT NOT NULL,
-    PRIMARY KEY (id_proveedor, id_ingrediente)
+    `nombre_ingrediente` VARCHAR(100) NOT NULL
 ) ENGINE = INNODB;
  
 -- Creamos las claves foráneas
-ALTER TABLE `usuarios`
-ADD CONSTRAINT `usuarios_to_pedidos`
-FOREIGN KEY (`id_usuario`) REFERENCES `pedidos` (`id_usuario`)
+ALTER TABLE `pedidos`
+ADD CONSTRAINT `usuarios_to_usuarios`
+FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
 ON UPDATE CASCADE;
  
-ALTER TABLE `pedidos`
-ADD CONSTRAINT `pedidos_to_linea`
-FOREIGN KEY (`id_pedido`) REFERENCES `linea_pedidos` (`id_pedido`)
+ALTER TABLE `linea_pedidos`
+ADD CONSTRAINT `linea_to_pedidos`
+FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`)
 ON UPDATE CASCADE;
 
 ALTER TABLE `linea_pedidos`
@@ -81,23 +69,18 @@ ADD CONSTRAINT `linea_to_tartas`
 FOREIGN KEY (`id_tarta`) REFERENCES `tartas` (`id_tarta`)
 ON UPDATE CASCADE;
 
-ALTER TABLE `tartas`
-ADD CONSTRAINT `tartas_to_conexion1`
-FOREIGN KEY (`id_tarta`) REFERENCES `tartas_ingredientes` (`id_tarta`)
+ALTER TABLE `tartas_ingredientes`
+ADD CONSTRAINT `conexion1_to_tartas`
+FOREIGN KEY (`id_tarta`) REFERENCES `tartas` (`id_tarta`)
 ON UPDATE CASCADE;
 
 ALTER TABLE `tartas_ingredientes`
 ADD CONSTRAINT `conexion1_to_ingredientes`
-FOREIGN KEY (`id_ingredientes`) REFERENCES `ingredientes` (`id_ingredientes`)
-ON UPDATE CASCADE;
-
-ALTER TABLE `ingredientes`
-ADD CONSTRAINT `ingredientes_to_proveedor`
-FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor` (`id_proveedor`)
+FOREIGN KEY (`id_ingrediente`) REFERENCES `ingredientes` (`id_ingrediente`)
 ON UPDATE CASCADE;
  
 -- Creamos un usuario para nuestras prácticas.
-CREATE USER `yolanda` IDENTIFIED BY 'Y14B06L1972';
+CREATE USER `admin` IDENTIFIED BY 'Y14B06L1972';
  
 -- Otorgamos al usuario permisos de conexión
-GRANT ALL PRIVILEGES ON `tartas_yoveia`.* TO `yolanda`@'%';
+GRANT ALL PRIVILEGES ON `tartas_yoveia`.* TO `admin`@'%';

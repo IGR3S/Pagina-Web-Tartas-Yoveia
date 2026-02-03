@@ -1,6 +1,3 @@
-<?php
-    include_once('datos.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
